@@ -1,6 +1,6 @@
 <template>
   <div>
-    <li v-on="{click: clicked}" :class="{completed: todo.isDone}">
+    <li @click="$emit('toggle',todo)" :class="{completed: todo.done}">
       {{todo.title}}
     </li>
   </div>
@@ -9,12 +9,7 @@
 <script>
 export default {
   name: "Todo",
-  props: ["todo"],
-  methods: {
-    clicked(s){
-      console.log(s.target)
-    }
-  }
+  props: ["todo"]
 };
 </script>
 

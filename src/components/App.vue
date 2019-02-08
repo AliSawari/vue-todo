@@ -1,33 +1,36 @@
 <template>
   <div>
-    <h1>Main Component</h1>
-    <div><Hello :msg="myName" :age="myAge" /></div>
+    <div><Welcome /></div>
     <div>
-      <Todos />
+      <Todos/>
     </div>
   </div>
 </template>
 
 <script>
-import Hello from "./Hello";
-import Todos from './Todos'
+import Welcome from "./Welcome";
+import Todos from "./Todos";
 
 export default {
   name: "App",
-  components: { Hello, Todos},
-  data() {
-    return {
-      myName: "Reza",
-      myAge: "15"
-    };
-  }
+  components: { Todos, Welcome }
 };
 </script>
 
 <style>
+* {
+  transition: 0.5s;
+  font-family: monospace;
+}
+
+.welcome {
+  font-size: 3.5rem;
+  font-weight: initial;
+  text-align: left;
+  color: #00fff2;
+}
 
 html {
-  font-family: "Avenir Next", Helevetica, sans-serif;
   text-align: center;
 }
 
@@ -40,7 +43,7 @@ input {
   padding-top: 30px;
   width: 500px;
   height: 60px;
-  font-size: 40px;
+  font-size: 30px;
   border: 0;
 }
 
@@ -62,6 +65,6 @@ li:hover {
 
 .completed {
   text-decoration: line-through;
+  color: #d6d6d6;
 }
-
 </style>
