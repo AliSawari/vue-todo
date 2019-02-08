@@ -7,5 +7,15 @@
 <script>
 export default {
   name: "Welcome"
-}
+};
 </script>
+
+<style>
+.welcome {
+  font-size: 5rem;
+  font-weight: initial;
+  text-align: left;
+  color: #00fff2;
+  margin: 10px;
+}
+</style>

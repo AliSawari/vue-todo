@@ -25,13 +25,6 @@ export default {
   font-family: monospace;
 }
 
-.welcome {
-  font-size: 3.5rem;
-  font-weight: initial;
-  text-align: left;
-  color: #00fff2;
-}
-
 html {
   text-align: center;
 }
