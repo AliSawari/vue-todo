@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul v-for="t in todos" :key="t.id" >
-      <Todo @toggle="$emit('toggle',t)" :todo="t" />
+      <Todo @del="$emit('del', t)" @toggle="$emit('toggle',t)" :todo="t" />
     </ul>
   </div>
 </template>

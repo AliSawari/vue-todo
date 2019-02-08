@@ -7,7 +7,7 @@
       <TodosSearch @searchText="handleSearch"/>
     </div>
     <div>
-      <TodosList @toggle="handleToggle" :todos="todoHandler()"/>
+      <TodosList @del="handleDel" @toggle="handleToggle" :todos="todoHandler()"/>
     </div>
   </div>
 </template>
@@ -49,11 +49,14 @@ export default {
       this.searchText = txt.toLowerCase()
     },
 
+    handleDel(todo){
+      this.todos = this.todos.filter(t => t !== todo ? t : null)
+    },
+
     todoHandler(){
       let txt = this.searchText 
       if(txt){
-        let fil = this.todos.filter(t => t.title.toLowerCase().includes(txt) ? t : null)
-        return fil
+        return this.todos.filter(t => t.title.toLowerCase().includes(txt) ? t : null)
       } else {
         return this.todos
       }

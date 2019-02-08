@@ -1,6 +1,8 @@
 <template>
   <div>
-    <div><Welcome /></div>
+    <div>
+      <Welcome/>
+    </div>
     <div>
       <Todos/>
     </div>
@@ -67,4 +69,5 @@ li:hover {
   text-decoration: line-through;
   color: #d6d6d6;
 }
+
 </style>
