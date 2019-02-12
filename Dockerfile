@@ -2,8 +2,10 @@ from node:10-alpine
 
 workdir /app
 
-copy . /app
+copy . .
 
-cmd yarn && yarn start
+run yarn
+
+cmd yarn start
 
 expose 3000
