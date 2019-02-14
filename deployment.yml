@@ -1,0 +1,17 @@
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: vue-todo
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: vue-todo
+    spec:
+      containers:
+        - name: vue-todo
+          image: alisawari/vue-todo
+          ports:
+          - containerPort: 8080
