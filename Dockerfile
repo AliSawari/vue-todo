@@ -4,8 +4,6 @@ workdir /app
 
 copy . .
 
-run yarn
+run npm i
 
-cmd yarn start
-
-expose 3000
+cmd npm start
