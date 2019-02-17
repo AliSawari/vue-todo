@@ -1,4 +1,20 @@
 ---
+kind: Service
+apiVersion: v1
+metadata:
+  name: vue-todo-service
+spec:
+  selector:
+    app: vue-todo
+  ports:
+    - protocol: "TCP"
+      port: 8080
+      targetPort: 80
+      nodePort: 30001
+  type: LoadBalancer
+
+
+---
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
@@ -14,4 +30,4 @@ spec:
         - name: vue-todo
           image: alisawari/vue-todo
           ports:
-          - containerPort: 8080
+          - containerPort: 3000
