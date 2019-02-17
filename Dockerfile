@@ -1,9 +1,6 @@
-from node:10-alpine
-
-workdir /app
-
-copy . .
-
-run npm i
-
-cmd npm start
+FROM node:10-alpine
+WORKDIR /app
+COPY . .
+RUN npm i
+EXPOSE 3000
+CMD npm start
