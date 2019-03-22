@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="welcome">Vue Todo</h1>
+    <h1 class="welcome">Vue Todo + Auto Deployment</h1>
   </div>
 </template>
 
