@@ -6,3 +6,5 @@ const port = 3000
 app.use("/", express.static(`${__dirname}/public`))
 
 app.listen(port, err => err ? err : console.log(`server is up on ${port}`))
+
+console.log("Auto Deployment Works like a charm from here")
